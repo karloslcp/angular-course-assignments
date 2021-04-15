@@ -10,4 +10,14 @@
       </ol>
     </div>
   </div>
+  <div class="row">
+    <button class="btn btn-primary" (click)="onDisplayDetails()">Display Details</button>
+    <p *ngIf="displayDetails">Secret Password = tuna</p>
+    <br>
+    <p *ngFor="let click of numberOfClicks"
+        [ngStyle]="click >= 5 ? {backgroundColor: 'blue'} : null"
+        [ngClass]="{ white: click >= 5 }">
+      {{ click }} clicks
+    </p>
+  </div>
 </div>
